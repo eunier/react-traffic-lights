@@ -1,11 +1,14 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
+import TrafficLight from './components/TrafficLight';
+
 function App() {
-  return (
-    <div></div>
-  );
+	return (
+		<div className="app">
+			<TrafficLight />
+		</div>
+	);
 }
 
 export default App;
