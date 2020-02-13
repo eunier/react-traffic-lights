@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 
+
+
 const Lights = () => {
 	const [activatedLight, setActivateLight] = useState(0);
 
