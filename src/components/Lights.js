@@ -10,8 +10,8 @@ const Lights = () => {
 					key={idx.toString()}
 					style={
 						activatedLight === idx
-							? { ...styles.light, ...styles[color] }
-							: styles.light
+							? { ...styles.light, ...styles[`${color}On`] }
+							: { ...styles.light, ...styles[`${color}Off`] }
 					}
 					onClick={() => setActivateLight(idx)}
 				></div>
@@ -30,17 +30,26 @@ const styles = {
 		height: '80px',
 		width: '80px'
 	},
-	red: {
+	redOn: {
 		backgroundColor: '#ff0000',
 		boxShadow: '0 0 20px 5px #ff0000'
 	},
-	yellow: {
+	redOff: {
+		backgroundColor: '#4d0000'
+	},
+	yellowOn: {
 		backgroundColor: '#ffff00',
 		boxShadow: '0 0 20px 5px #ffff00'
 	},
-	green: {
+	yellowOff: {
+		backgroundColor: '#4d4d00'
+	},
+	greenOn: {
 		backgroundColor: '#00ff00',
 		boxShadow: '0 0 20px 5px #00ff00'
+	},
+	greenOff: {
+		backgroundColor: '#004d00'
 	}
 };
 
