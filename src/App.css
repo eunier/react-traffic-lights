@@ -4,13 +4,13 @@
 	}
 
 	100% {
-		left: calc(100vw - (100vw - 100%) + 20%);
+		left: calc(100vw - (100vw - 100%) + 20px);
 	}
 }
 
 @keyframes carRightToLeft {
 	0% {
-		left: calc(100vw - (100vw - 100%) + 20%);
+		left: calc(100vw - (100vw - 100%) + 20px);
 	}
 
 	100% {

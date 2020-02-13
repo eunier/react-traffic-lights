@@ -27,7 +27,6 @@ const styles = {
 		backgroundColor: '#1b1e1f',
 		margin: '10px 0',
 		cursor: 'pointer',
-		// position: 'relative',
 		borderRadius: '50%',
 		height: '80px',
 		width: '80px'
