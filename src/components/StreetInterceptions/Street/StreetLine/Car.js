@@ -3,15 +3,17 @@ import React from 'react';
 const Car = props => {
 	return (
 		<>
-			<img
-				src={props.car}
-				alt="car"
-				style={
-					props.direction === 'right'
-						? { ...styles.car, ...styles.carLeftToRight }
-						: { ...styles.car, ...styles.carRightToLeft }
-				}
-			/>
+			{props.activatedLight !== 0 ? (
+				<img
+					src={props.car}
+					alt="car"
+					style={
+						props.direction === 'right'
+							? { ...styles.car, ...styles.carLeftToRight }
+							: { ...styles.car, ...styles.carRightToLeft }
+					}
+				/>
+			) : null}
 		</>
 	);
 };

@@ -9,11 +9,21 @@ import car4 from '../../../resources/car4.svg';
 import car5 from '../../../resources/car5.svg';
 import car6 from '../../../resources/car6.svg';
 
-const Street = () => {
+const Street = props => {
 	return (
 		<div style={styles.container}>
-			<StreetLine direction="right" cars={[car1, car2, car3]} />
-			<StreetLine direction="left" cars={[car4, car5, car6]} />
+			<StreetLine
+				direction="right"
+				cars={[car1, car2, car3]}
+				activatedLight={props.activatedLight}
+				setActivateLight={props.setActivateLight}
+			/>
+			<StreetLine
+				direction="left"
+				cars={[car4, car5, car6]}
+				activatedLight={props.activatedLight}
+				setActivateLight={props.setActivateLight}
+			/>
 		</div>
 	);
 };

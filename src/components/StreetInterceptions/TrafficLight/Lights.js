@@ -1,21 +1,17 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-
-
-const Lights = () => {
-	const [activatedLight, setActivateLight] = useState(0);
-
+const Lights = props => {
 	return (
 		<>
 			{['red', 'yellow', 'green'].map((color, idx) => (
 				<div
 					key={idx.toString()}
 					style={
-						activatedLight === idx
+						props.activatedLight === idx
 							? { ...styles.light, ...styles[`${color}On`] }
 							: { ...styles.light, ...styles[`${color}Off`] }
 					}
-					onClick={() => setActivateLight(idx)}
+					onClick={() => props.setActivateLight(idx)}
 				></div>
 			))}
 		</>

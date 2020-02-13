@@ -6,7 +6,13 @@ const StreetLine = props => {
 	return (
 		<div style={styles.streetLine}>
 			{props.cars.map((car, idx) => (
-				<Car key={idx} car={car} direction={props.direction} />
+				<Car
+					key={idx}
+					car={car}
+					direction={props.direction}
+					activatedLight={props.activatedLight}
+					setActivateLight={props.setActivateLight}
+				/>
 			))}
 		</div>
 	);

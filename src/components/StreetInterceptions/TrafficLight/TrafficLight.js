@@ -2,11 +2,14 @@ import React from 'react';
 
 import Lights from './Lights';
 
-const TrafficLight = () => {
+const TrafficLight = props => {
 	return (
 		<>
 			<div style={styles.trafficLightContainer}>
-				<Lights />
+				<Lights
+					activatedLight={props.activatedLight}
+					setActivateLight={props.setActivateLight}
+				/>
 			</div>
 		</>
 	);
@@ -18,33 +21,12 @@ const styles = {
 		height: '300px',
 		width: '100px',
 		borderRadius: '20px',
+		marginTop: '20px',
 		border: '10px solid black',
 		display: 'flex',
 		flexDirection: 'column',
 		alignItems: 'center',
 		justifyContent: 'space-between'
-	},
-	carContainer: {
-		width: '100%',
-		overflow: 'hidden'
-	},
-	carLine: {
-		display: 'flex'
-	},
-	car: {
-		minHeight: '200px',
-		minWidth: '200px',
-		margin: '0 100px',
-		position: 'relative',
-		animationDuration: '3s',
-		animationIterationCount: 'infinite',
-		animationTimingFunction: 'ease-in'
-	},
-	carLeftToRight: {
-		animationName: 'carLeftToRight'
-	},
-	carRightToLeft: {
-		animationName: 'carRightToLeft'
 	}
 };
 
