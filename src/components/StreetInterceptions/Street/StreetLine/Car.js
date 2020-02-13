@@ -24,7 +24,7 @@ const styles = {
 		minWidth: '200px',
 		margin: '0 100px',
 		position: 'relative',
-		animationDuration: '6s',
+		animationDuration: '9s',
 		animationIterationCount: 'infinite',
 		animationTimingFunction: 'ease-in'
 	},
