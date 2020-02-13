@@ -1,10 +1,23 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import TrafficLight from './TrafficLight/TrafficLight';
 import Street from './Street/Street';
 
 const StreetInterception = () => {
 	const [activatedLight, setActivateLight] = useState(2);
+
+	useEffect(() => {
+		setInterval(() => {
+			setActivateLight(prevActivateLight => {
+				console.log('here');
+				if (prevActivateLight === 2) {
+					setActivateLight(0);
+				}
+
+				return ++prevActivateLight;
+			});
+		}, 3000);
+	}, []);
 
 	return (
 		<div style={styles.container}>
