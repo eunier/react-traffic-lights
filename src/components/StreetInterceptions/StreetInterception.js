@@ -4,20 +4,28 @@ import TrafficLight from './TrafficLight/TrafficLight';
 import Street from './Street/Street';
 
 const StreetInterception = () => {
-	const [activatedLight, setActivateLight] = useState(2);
+	const [activatedLight, setActivateLight] = useState('green');
+	const [trafficLightDirection, setTrafficLightDirection] = useState('down');
 
 	useEffect(() => {
-		setInterval(() => {
-			setActivateLight(prevActivateLight => {
-				console.log('here');
-				if (prevActivateLight === 2) {
-					setActivateLight(0);
+		const interval = setInterval(() => {
+			if (activatedLight === 'yellow') {
+				if (trafficLightDirection === 'up') {
+					setActivateLight('red');
+				} else if (trafficLightDirection === 'down') {
+					setActivateLight('green');
 				}
-
-				return ++prevActivateLight;
-			});
+			} else if (activatedLight === 'green') {
+				setTrafficLightDirection('up');
+				setActivateLight('yellow');
+			} else if (activatedLight === 'red') {
+				setTrafficLightDirection('down');
+				setActivateLight('yellow');
+			}
 		}, 3000);
-	}, []);
+
+		return () => clearInterval(interval);
+	});
 
 	return (
 		<div style={styles.container}>

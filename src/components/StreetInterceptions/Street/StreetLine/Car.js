@@ -3,7 +3,7 @@ import React from 'react';
 const Car = props => {
 	return (
 		<>
-			{props.activatedLight !== 0 ? (
+			{props.activatedLight !== 'red' ? (
 				<img
 					src={props.car}
 					alt="car"
@@ -24,7 +24,7 @@ const styles = {
 		minWidth: '200px',
 		margin: '0 100px',
 		position: 'relative',
-		animationDuration: '3s',
+		animationDuration: '6s',
 		animationIterationCount: 'infinite',
 		animationTimingFunction: 'ease-in'
 	},

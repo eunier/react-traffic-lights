@@ -7,11 +7,11 @@ const Lights = props => {
 				<div
 					key={idx.toString()}
 					style={
-						props.activatedLight === idx
+						props.activatedLight === color
 							? { ...styles.light, ...styles[`${color}On`] }
 							: { ...styles.light, ...styles[`${color}Off`] }
 					}
-					onClick={() => props.setActivateLight(idx)}
+					onClick={() => props.setActivateLight(color)}
 				></div>
 			))}
 		</>

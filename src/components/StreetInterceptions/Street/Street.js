@@ -14,13 +14,13 @@ const Street = props => {
 		<div style={styles.container}>
 			<StreetLine
 				direction="right"
-				cars={[car1, car2, car3]}
+				cars={[car1, car2, car3, car1, car2, car3]}
 				activatedLight={props.activatedLight}
 				setActivateLight={props.setActivateLight}
 			/>
 			<StreetLine
 				direction="left"
-				cars={[car4, car5, car6]}
+				cars={[car4, car5, car6, car4, car5, car6]}
 				activatedLight={props.activatedLight}
 				setActivateLight={props.setActivateLight}
 			/>
